@@ -3,7 +3,7 @@ function handleIframeVisibility() {
   const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
 
-  if (screenWidth <= 700) {
+  if (screenWidth <= 770) {
     // const iframe = createIframe();
      prayerTimeHomeDiv.src = 'https://masjidbox.com/prayer-times/islamic-society-of-schuylkill-county';
   } else {
