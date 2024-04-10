@@ -6,9 +6,6 @@ function createIframe() {
   return iframe;
 }
 
-
-// test
-
 function handleIframeVisibility() {
   const prayerTimeHomeDiv = document.querySelector('.iframe-container');
   const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
@@ -25,8 +22,7 @@ function handleIframeVisibility() {
   }
 }
 
-// Call the function on page load
 window.addEventListener('load', handleIframeVisibility);
 
-// Call the function on window resize
+
  window.addEventListener('resize', handleIframeVisibility);
