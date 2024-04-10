@@ -93,9 +93,6 @@ Tags: blog, news, one-column, three-columns, wide-blocks, block-patterns, custom
 
 /*** home page prayer time hides ***/
 @media screen and (min-width: 770px) {
-  .prayerTimeMobile {
-    display: none !important;
-  }
 
   .eb-button-wrapper.eb-button-lx4q4 .eb-button-anchor {
     margin-right: 10px;
