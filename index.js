@@ -1,5 +1,4 @@
-console.log("Hi yall There!");
-
+alert("Hello! I am an alert box!!");
 
 
 function createIframe() {
