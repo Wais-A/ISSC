@@ -1,6 +1,3 @@
-
-
-
 function createIframe() {
   const iframe = document.createElement('iframe');
   iframe.id = 'myIframe';
