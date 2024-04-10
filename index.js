@@ -20,7 +20,6 @@ function handleIframeVisibility() {
     }
   }
 }
-console.log("this is taking forever");
 
 
 window.addEventListener('load', handleIframeVisibility);
