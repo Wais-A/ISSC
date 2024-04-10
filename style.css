@@ -1,0 +1,443 @@
+/*
+Theme Name: ISSC
+Theme URI: https://wordpress.com/theme/creatio
+Author: Automattic
+Author URI: https://automattic.com/
+Description: Creatio is a simple, minimal theme that supports full-site editing and global styles. Use it to build something beautiful.
+Requires at least: 6.1
+Tested up to: 6.2
+Requires PHP: 5.7
+Version: 1.0.5
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: creatio
+Tags: blog, news, one-column, three-columns, wide-blocks, block-patterns, custom-colors, custom-logo, custom-menu, editor-style, featured-images, full-site-editing, rtl-language-support, style-variations, template-editing, theme-options, threaded-comments, translation-ready
+*/
+
+
+.wp-container-core-group-is-layout-6.wp-container-core-group-is-layout-6 {
+  padding-right: 8%;
+
+}
+
+/* Remove block gap between first-level blocks */
+:where(.wp-site-blocks)>* {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/* Remove block gap between first-level blocks */
+:where(.wp-site-blocks)>* {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/*** screen sizing ***/
+@media screen and (max-width: 770px) {
+  .tagLine {
+    font-size: 11px;
+  }
+
+  .donationButton,
+  .volunteerButton {
+    font-size: 20px;
+  }
+
+  .wp-block-jetpack-layout-grid.wp-block-jetpack-layout-gutter__small {
+    display: flex !important;
+    justify-content: center;
+  }
+
+  /*** side bar ***/
+  .sideBarEl {
+    display: none;
+  }
+
+  /*** prayertime in home menu for moble view ***/
+  .prayTimeMobile {
+    display: block;
+  }
+
+  .wp-container-core-group-is-layout-6.wp-container-core-group-is-layout-6 {
+    padding-right: 0px;
+  }
+
+  .wp-container-core-group-is-layout-5.wp-container-core-group-is-layout-5 {
+    justify-content: space-around !important;
+  }
+
+}
+
+
+@media screen and (max-width: 1050px) {
+
+  /*** Explore masjid page helps order content ***/
+  .wp-block-media-text:nth-child(odd) {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .wp-block-media-text:nth-child(even) {
+    display: flex;
+    flex-direction: column-reverse;
+
+  }
+
+  /*** About page, image carsel ***/
+  .column1-desktop-grid__span-6 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/*** home page prayer time hides ***/
+@media screen and (min-width: 770px) {
+  .prayerTimeMobile {
+    display: none !important;
+  }
+
+  .eb-button-wrapper.eb-button-lx4q4 .eb-button-anchor {
+    margin-right: 10px;
+    width: 250px;
+  }
+}
+
+/*** Islamic widgets ***/
+.sideBarEl {
+  margin: 0px;
+}
+
+
+
+/*************************/
+
+/** nav bar and donate button **/
+
+@media screen and (max-width: 1050px) {
+  .navDonate {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/*** donate button header***/
+:root {
+  --main-bg-color: white;
+  --textopacity: 0;
+  --display-condition: hidden;
+  --imgOpacity: 1;
+  --duration: 1.5s;
+}
+
+.wp-image-1655 {
+  opacity: var(--imgOpacity);
+  transition-duration: .5s;
+  transition-delay: var(--duration);
+  position: relative;
+  bottom: 5px;
+}
+
+.volunteerImage {
+  opacity: var(--imgOpacity) !important;
+  transition-duration: .5s;
+  transition-delay: var(--duration);
+  position: relative;
+  bottom: 5px;
+}
+
+.donationText {
+  opacity: var(--textopacity);
+  visibility: var(--display-condition);
+  transition-duration: 1s;
+  transition-delay: 1s;
+  font-weight: 700;
+  position: relative;
+  bottom: 60px;
+  font-size: .9em
+}
+
+.VolunteerText {
+  opacity: var(--textopacity);
+  visibility: var(--display-condition);
+  transition-duration: 1s;
+  transition-delay: 1s;
+  font-weight: 700;
+  position: relative;
+  bottom: 56px;
+  font-size: .9em;
+}
+
+.donationButton,
+.volunteerButton {
+  border: 2px solid #2EA6F6;
+  width: 100%;
+  background-color: #214C93 !important;
+  border-radius: 20px !important;
+  transition-duration: 1s;
+  border: 2px solid #05347f;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  height: 50px;
+}
+
+@keyframes example {
+  0% {
+    border: 2px solid #2EA6F6;
+    box-shadow: 1px 1px 25px #2EA6F6;
+  }
+
+  50% {
+    border: 2px solid #27508D;
+    box-shadow: 1px 1px 25px #27508D;
+  }
+
+  100% {
+    border: 2px solid #2EA6F6;
+    box-shadow: 1px 1px 25px #2EA6F6;
+  }
+}
+
+.donationButton:hover {
+  cursor: pointer;
+  --font: white;
+  --main-bg-color: white;
+  --textopacity: 1;
+  --display-condition: visibility;
+
+  --imgOpacity: 0;
+  --duration: .5s;
+}
+
+.donationButton:active {
+  background: green !important;
+  border: 2px solid #8BE78A
+}
+
+.page-id-2372 .donationButton {
+  background: green !important;
+  border: 2px solid #8BE78A;
+  --display-condition: visibility;
+  --font: white;
+  animation-iteration-count: 0;
+  box-shadow: 1px 1px 25px #8BE78A;
+}
+
+.volunteerButton:hover {
+  cursor: pointer;
+  --font: white;
+  --main-bg-color: white;
+  --textopacity: 1;
+  --display-condition: visibility;
+
+  --imgOpacity: 0;
+  --duration: .5s;
+}
+
+.volunteerButton:active {
+  background: green !important;
+  border: 2px solid #8BE78A
+}
+
+.page-id-2872 .volunteerButton {
+  background: green !important;
+  border: 2px solid #8BE78A;
+  --display-condition: visibility;
+  --font: white;
+  animation-iteration-count: 0;
+  box-shadow: 1px 1px 25px #8BE78A;
+}
+
+@media screen and (max-width: 1050px) {
+  .donationButton {
+    --display-condition: visibility;
+    height: 90px;
+    width: 100% !important;
+  }
+
+  .volunteerButton {
+    --display-condition: visibility;
+    height: 90px;
+    width: 100% !important;
+  }
+
+  .wp-image-1655 {
+    position: static;
+    opacity: 1;
+  }
+
+  .donationText {
+    position: static;
+    --textopacity: 1;
+  }
+
+  .volunteerImage {
+    position: static;
+    opacity: 1 !important;
+  }
+
+  .VolunteerText {
+    position: static;
+    --textopacity: 1;
+  }
+}
+
+/*** Site title setting ***/
+@media screen and (max-width: 400px) {
+  .mainTitle {
+    font-size: 1.1rem
+  }
+}
+
+@media screen and (max-width: 361px) and (min-width: 355px) {
+  .mainTitle {
+    font-size: 1rem
+  }
+}
+
+/**wierd border around donate button**/
+.wp-block-buttons>.wp-block-button.has-custom-width .wp-block-button__link {
+  height: 50px;
+}
+
+/** Load more post button **/
+.is-style-default .wp-block-button__link {
+  border-radius: 50px;
+  background: #27508D;
+  text-align: center
+}
+
+.is-style-default {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.wc-stripe-banner-checkout fieldset {
+  width: 100px;
+}
+
+
+@media screen and (max-width: 770px) {
+  .footerNav {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .footerNav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 770px) {
+  .prayerTimeHome {
+    display: none;
+  }
+}
+
+.prayerTimeHome {
+
+  min-height: 620px;
+}
+
+.mainBodyEle {
+  transition: all 5s ease;
+}
+
+/* Keyframes animation to fade in */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.forminator-button-submit {
+  border-radius: 50px !important;
+  background: #214C93 !important;
+}
+
+.forminator-button-submit:hover {
+  background: #008FCA !important;
+}
+
+.forminator-button-submit {
+  border-radius: 20px !important;
+  background: #214C93 !important;
+}
+
+.forminator-button-submit:hover {
+  background: #008FCA !important;
+}
+
+
+
+.prayerLoading {
+  color: #244F8D;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.eb-post-grid-wrapper.eb-post-grid-bu82lc8 .ebpg-post-grid-column {
+  box-shadow: none !important;
+
+}
+
+.ebpg-entry-wrapper p {
+  color: #605d5d !important;
+}
+
+.eb-post-grid-wrapper.eb-post-grid-bu82lc8 {
+  grid-template-columns: none !important;
+}
+
+.ays-quiz-category-title {
+  display: none;
+}
+
+.wc-block-components-notice-banner__content a {
+  color: black;
+  font-weight: 900;
+  text-decoration: underline;
+  font-size: 1rem;
+}
+
+
+.woocommerce-info a {
+
+  color: black;
+}
+
+@media screen and (max-width: 1500px) {
+  .sideBarEl {
+    display: none;
+  }
+
+  .block-editor-block-list__block wp-block sideBarEl {
+    display: none;
+  }
+
+  .wp-block-jetpack-layout-grid {
+    display: block;
+    width: 100%;
+  }
+
+  .wp-container-core-group-is-layout-6.wp-container-core-group-is-layout-6 {
+    padding-right: 0px;
+
+  }
+}
+.iframe-container {
+    width: 100%;
+    height: 600px; /* Adjust the height as needed */
+    overflow: hidden;
+  }
+  
+  .iframe-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
