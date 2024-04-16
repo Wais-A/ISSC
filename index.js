@@ -1,18 +1,20 @@
 function handleIframeVisibility() {
-  const prayerTimeHomeIframe = document.querySelector('#mobile-prayer-widget');
   const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-
-  if (screenWidth <= 770) {
-    // const iframe = createIframe();
-     prayerTimeHomeIframe.src = 'https://masjidbox.com/prayer-times/islamic-society-of-schuylkill-county';
+  const iframeContainer = document.getElementsByClassName("iframe-container")[1];
+  const iframeElement = document.createElement("iframe");
+  iframeContainer.append(iframeElement);
+  
+  if (screenWidth <= 1024) {
+    iframeElement.src = 'https://masjidbox.com/prayer-times/islamic-society-of-schuylkill-county';
+    iframeElement.scrolling = 'no';
+    iframeContainer.style.height = "600px";
+    
   } else {
-    const iframe = document.getElementById('mobile-prayer-widget');
-    if (iframe) {
-      prayerTimeHomeIframe.removeChild(iframe);
+      iframeContainer.removeChild(iframeElement);
+      iframeContainer.style.height = "0px";
     }
   }
-}
 
 
+window.addEventListener('resize', handleIframeVisibility);
 window.addEventListener('load', handleIframeVisibility);
