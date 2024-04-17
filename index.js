@@ -22,7 +22,7 @@ function handleIframeVisibility() {
 
   if (screenWidth <= 1024) {
     if (iframeBigMode) {
-      removeIframe(0)
+      removeIframe(0);
       iframeBigMode = false;
     }
     makeIframe(1);
