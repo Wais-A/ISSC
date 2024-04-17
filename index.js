@@ -17,6 +17,7 @@ function handleIframeVisibility() {
 
   function removeIframe(n) {
     iframeContainer[n].style.height = "0px";
+    iframeContainer[n].firstElementChild.src = '';
   }
 
   if (screenWidth <= 1024) {
