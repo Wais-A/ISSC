@@ -1,19 +1,40 @@
 function handleIframeVisibility() {
   const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-  const iframeContainer = document.getElementsByClassName("iframe-container")[1];
+  const iframeContainer = document.getElementsByClassName("iframe-container");
   const iframeElement = document.createElement("iframe");
-  iframeContainer.append(iframeElement);
-  
-  if (screenWidth <= 1024) {
+
+
+
+  function makeIframe(n) {
+    iframeContainer[n].append(iframeElement);
+    iframeElement.title = "prayer times";
     iframeElement.src = 'https://masjidbox.com/prayer-times/islamic-society-of-schuylkill-county';
     iframeElement.scrolling = 'no';
-    iframeContainer.style.height = "600px";
-    
-  } else {
-      iframeContainer.removeChild(iframeElement);
-      iframeContainer.style.height = "0px";
-    }
+    iframeContainer[n].style.height = "600px";
   }
+
+  function removeIframe(n) {
+    iframeContainer[n].removeChild(iframeContainer[n].firstElementChild);
+    iframeContainer[n].style.height = "0px";
+  }
+
+  if (screenWidth <= 1024) {
+    if (iframeBigMode) {
+      removeIframe(0)
+      iframeBigMode = false;
+    }
+
+    makeIframe(1);
+    console.log("small")
+  } else {
+    if (!iframeBigMode) {
+      removeIframe(1);
+      iframeBigMode = true;
+    }
+    makeIframe(0);
+    console.log("big")
+  }
+}
 
 
 window.addEventListener('resize', handleIframeVisibility);
