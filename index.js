@@ -1,3 +1,5 @@
+let iframeBigMode = true;
+
 function handleIframeVisibility() {
   const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
   const iframeContainer = document.getElementsByClassName("iframe-container");
