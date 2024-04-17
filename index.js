@@ -16,7 +16,6 @@ function handleIframeVisibility() {
   }
 
   function removeIframe(n) {
-    iframeContainer[n].removeChild(iframeContainer[n].firstElementChild);
     iframeContainer[n].style.height = "0px";
   }
 
