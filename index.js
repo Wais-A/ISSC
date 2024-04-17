@@ -23,16 +23,13 @@ function handleIframeVisibility() {
       removeIframe(0)
       iframeBigMode = false;
     }
-
     makeIframe(1);
-    console.log("small")
   } else {
     if (!iframeBigMode) {
       removeIframe(1);
       iframeBigMode = true;
     }
     makeIframe(0);
-    console.log("big")
   }
 }
 
